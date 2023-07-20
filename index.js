@@ -116,13 +116,5 @@ app.listen(port, () => {
 })
 
 instagram()
-setInterval(instagram,60*1000*2)
+setInterval(instagram,60*1000*3)
 
-// (async() => {
-//     await db_stuff();
-//   })();
-// function get_instagram_info()
-
-// setInterval(function() {
-//     // your code goes here...
-// }, 60 * 1000 * 10);
