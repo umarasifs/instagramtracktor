@@ -75,7 +75,7 @@ async function check_hashtags(checked){
             if(post.media_type == "IMAGE"){
                 kitchener_posts.push({
                     "image_url": post.media_url,
-                    "time_stamp": Date(post.timestamp)
+                    "time_stamp": post.timestamp
                 });
                 ids.push(post.id);
             }
@@ -85,7 +85,7 @@ async function check_hashtags(checked){
             if(post.media_type == "IMAGE"){
                 fullcircle_posts.push({
                     "image_url": post.media_url,
-                    "time_stamp": Date(post.timestamp)
+                    "time_stamp": post.timestamp
                 })
             }
             ids.push(post.id);
