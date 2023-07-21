@@ -58,10 +58,16 @@ async function check_hashtags(checked){
     const TRACKTORAPP_HASHTAG = process.env.TRACKTORAPP_HASHTAG;
     const KITCHENERMARKET_HASHTAG = process.env.KITCHENERMARKET_HASHTAG;
     const FULLCIRCLEFOODS_HASHTAG = process.env.FULLCIRCLEFOODS_HASHTAG;
-
-    const response = await axios.get(
-		`https://graph.facebook.com/v17.0/${TRACKTORAPP_HASHTAG}/recent_media?user_id=${USER_ID}&fields=media_url%2Ccaption%2Ctimestamp%2Cmedia_type&access_token=${ACCESS_TOKEN}`
-	);
+    console.log("pre insta")
+    try {
+        const response = await axios.get(
+            `https://graph.facebook.com/v17.0/${TRACKTORAPP_HASHTAG}/recent_media?user_id=${USER_ID}&fields=media_url%2Ccaption%2Ctimestamp%2Cmedia_type&access_token=${ACCESS_TOKEN}`
+        );
+    }catch(error){
+        console.log(error)
+        const response= {"data":{"data":[]}}
+    }
+    console.log("post insta")
     const data= response["data"]["data"]
     let kitchener_posts = [];
     let fullcircle_posts = [];
