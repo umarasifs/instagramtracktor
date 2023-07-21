@@ -60,7 +60,7 @@ async function check_hashtags(checked){
     const FULLCIRCLEFOODS_HASHTAG = process.env.FULLCIRCLEFOODS_HASHTAG;
 
     const response = await axios.get(
-		`https://graph.facebook.com/v17.0/17841563020115819/recent_media?user_id=${USER_ID}&fields=media_url%2Ccaption%2Ctimestamp%2Cmedia_type&access_token=${ACCESS_TOKEN}`
+		`https://graph.facebook.com/v17.0/${TRACKTORAPP_HASHTAG}/recent_media?user_id=${USER_ID}&fields=media_url%2Ccaption%2Ctimestamp%2Cmedia_type&access_token=${ACCESS_TOKEN}`
 	);
     const data= response["data"]["data"]
     let kitchener_posts = [];
