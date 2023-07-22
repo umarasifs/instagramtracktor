@@ -59,7 +59,7 @@ async function check_hashtags(checked){
     const KITCHENERMARKET_HASHTAG = process.env.KITCHENERMARKET_HASHTAG;
     const FULLCIRCLEFOODS_HASHTAG = process.env.FULLCIRCLEFOODS_HASHTAG;
     console.log("pre insta")
-    console.log(`https://graph.facebook.com/v17.0/${TRACKTORAPP_HASHTAG}/recent_media?user_id=${USER_ID}&fields=media_url%2Ccaption%2Ctimestamp%2Cmedia_type&access_token=${ACCESS_TOKEN}`)
+    //console.log(`https://graph.facebook.com/v17.0/${TRACKTORAPP_HASHTAG}/recent_media?user_id=${USER_ID}&fields=media_url%2Ccaption%2Ctimestamp%2Cmedia_type&access_token=${ACCESS_TOKEN}`)
     const response = await axios.get(
         `https://graph.facebook.com/v17.0/${TRACKTORAPP_HASHTAG}/recent_media?user_id=${USER_ID}&fields=media_url%2Ccaption%2Ctimestamp%2Cmedia_type&access_token=${ACCESS_TOKEN}`
     );
